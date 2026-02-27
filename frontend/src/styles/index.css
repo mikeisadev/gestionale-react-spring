@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+#content {
+    width: calc(100% - 320px);
+    margin-right: 0;
+    margin-left: auto;
+    padding: 20px;
+}
