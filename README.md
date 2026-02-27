@@ -170,5 +170,5 @@ Quindi clicca quella voce e attendi l'avvio del backend che girerà su un porta 
 
 NOTA: se non appare la voce di Spring Boot Dashboard verifica se hai scritto correttamente. Altrimenti è probabile che non hai le estensioni per Visual Studio Code.
 
-NOTA: verifica se vengono generati degli errori all'avvio di Spring Boot e cerca di correggerli seguendo gli step scritti all'inizio di questo file ReadMe, perché potrebbe essere che non hai configurato correttamente l'ambiente.
+NOTA: verifica se vengono generati degli errori all'avvio di Spring Boot e cerca di correggerli seguendo gli step scritti all'inizio di questo file ReadMe, perché potrebbe essere che non hai configurato correttamente l'ambiente. 
 
