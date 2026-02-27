@@ -30,6 +30,7 @@ public class DipendenteController {
     public ResponseEntity<ApiResponse<DipendenteDTO>> creaDipendente(@RequestBody DipendenteDTO dto){
         try{
             Dipendente entity = MapperUtils.toDipendenteEntity(dto);
+
             if(dto.getRepartoId() != null){
                 Reparto reparto = repartoService.trovaPerId(dto.getRepartoId())
                         .orElseThrow(() -> new IllegalArgumentException("Reparto non trovato"));
@@ -48,6 +49,7 @@ public class DipendenteController {
                 .stream()
                 .map(MapperUtils::toDipendenteDTO)
                 .collect(Collectors.toList());
+                
         return ResponseEntity.ok(new ApiResponse<>(200, "OK", dtos));
     }
 
