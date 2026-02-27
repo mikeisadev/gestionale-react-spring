@@ -153,3 +153,22 @@ A questo punto puoi avviare il tuo backend direttamente su Visual Studio Code us
 
 Dovrai ricercerare l'icona di Spring Boot (si tratta di un'icona simile a un pulsante di accensione) e successivamente dovrai cliccare sull'icona "start" o "play" per avviare il backend.
 
+Se non ti appare quell'icona, prova a usare la barra di ricerca di Visual Studio Code premendo la combo di pulsanti:
+
+`CTRL + P` (WINDOWS)
+`CMD + p` (MacOS)
+
+A questo punto cerca questa stringa:
+
+`> Spring Boot Dashboard`
+
+Dovrai cliccare sulla voce in elenco tra i risultati di ricerca:
+
+`Spring Boot Dashboard: Run`
+
+Quindi clicca quella voce e attendi l'avvio del backend che girerà su un porta separata dal frontend.
+
+NOTA: se non appare la voce di Spring Boot Dashboard verifica se hai scritto correttamente. Altrimenti è probabile che non hai le estensioni per Visual Studio Code.
+
+NOTA: verifica se vengono generati degli errori all'avvio di Spring Boot e cerca di correggerli seguendo gli step scritti all'inizio di questo file ReadMe, perché potrebbe essere che non hai configurato correttamente l'ambiente.
+
