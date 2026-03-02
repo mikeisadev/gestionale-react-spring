@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,11 @@ import com.progetto.gestionale.service.ProdottoService;
 
 @RestController
 @RequestMapping("/api/prodotti")
+/**
+ * Puoi farlo, ma esiste una configurazione migliore dentro /config/CorsConfig.java 
+ * che viene applicato a tutti i controller grazie a un Bean.
+ */
+// @CrossOrigin(origins = {"http://localhost:5173"})
 public class ProdottoController {
 
     private final ProdottoService prodottoService;
