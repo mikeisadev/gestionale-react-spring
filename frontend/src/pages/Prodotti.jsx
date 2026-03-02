@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProdotti, creaProdotto } from '../services/prodottiService';
+import { prodottiService } from '../services/prodottiService';
 import { prodottoFormSchema } from "../data/forms";
 
 const Prodotti = () => {
@@ -21,7 +21,7 @@ const Prodotti = () => {
          * Vado a effettuare una chiamata HTTP di tipo GET al
          * server per ottenere i prodotti
          */
-        getProdotti()
+        prodottiService.getProdotti()
             .then(response => {
                 console.log(response.data);
 
@@ -57,7 +57,7 @@ const Prodotti = () => {
         /**
          * Qui invio una richiesta di tipo post al server per aggiungere un prodotto.
          */
-        creaProdotto(formProdotto)
+        prodottiService.creaProdotto(formProdotto)
             .then(response => {
                 console.log(response)
 
@@ -68,7 +68,7 @@ const Prodotti = () => {
                  * Richiamare il server per ottenere i dati freschi dal
                  * database
                  */
-                getProdotti()
+                prodottiService.getProdotti()
                     .then(response => {
                         console.log(response.data);
 
