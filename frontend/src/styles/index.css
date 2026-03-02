@@ -1,8 +1,34 @@
 @import "tailwindcss";
 
+/* IMPORTANTE per il "content" */
 #content {
     width: calc(100% - 320px);
     margin-right: 0;
     margin-left: auto;
     padding: 20px;
+}
+
+/* Titoli */
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.form-input {
+    @apply border border-solid border-black p-[5px] rounded-md w-full;
+}
+
+.form-submit-btn {
+    @apply bg-blue-400 p-[6px] text-white rounded-md w-full;
 }
