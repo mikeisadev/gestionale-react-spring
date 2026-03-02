@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import axios from 'axios';
+import { getProdotti, creaProdotto } from '../services/prodottiService';
+import { prodottoFormSchema } from "../data/forms";
 
 const Prodotti = () => {
     /**
@@ -13,20 +14,14 @@ const Prodotti = () => {
      * Oggetto che nello state di React va a mappare i campi
      * del form
      */
-    const [formProdotto, compilaFormProdotto] = useState({
-        titolo: '',
-        descrizione: '',
-        prezzo: 0,
-        quantitaMagazzino: 0,
-        urlImmagine: ''
-    });
+    const [formProdotto, compilaFormProdotto] = useState(prodottoFormSchema);
 
     useEffect(() => {
         /**
          * Vado a effettuare una chiamata HTTP di tipo GET al
          * server per ottenere i prodotti
          */
-        axios.get("http://localhost:8081/api/prodotti")
+        getProdotti()
             .then(response => {
                 console.log(response.data);
 
@@ -47,8 +42,6 @@ const Prodotti = () => {
         }));
 
         console.log(formProdotto);
-
-        axios.post()
     }
 
     /**
@@ -64,24 +57,18 @@ const Prodotti = () => {
         /**
          * Qui invio una richiesta di tipo post al server per aggiungere un prodotto.
          */
-        axios.post("http://localhost:8081/api/prodotti", formProdotto)
+        creaProdotto(formProdotto)
             .then(response => {
                 console.log(response)
 
                 // Vado a svuotare i campi dopo l'invio al server
-                compilaFormProdotto({
-                    titolo: '',
-                    descrizione: '',
-                    prezzo: 0,
-                    quantitaMagazzino: 0,
-                    urlImmagine: ''
-                })
+                compilaFormProdotto(prodottoFormSchema)
 
                 /**
                  * Richiamare il server per ottenere i dati freschi dal
                  * database
                  */
-                axios.get("http://localhost:8081/api/prodotti")
+                getProdotti()
                     .then(response => {
                         console.log(response.data);
 
