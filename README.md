@@ -34,7 +34,7 @@ All'interno di questa repository troverai due cartelle:
 
 Prima di avviare il progetto assicurati di avere Java installato sul tuo computer. Scegli la versione 25, 21 o quella che preferisci.
 
-Poi assicurati di avere le seguenti estensioni sul tuo IDE VS CODE:
+Poi assicurati di avere le seguenti estensioni sul tuo IDE VS CODE per supportare al meglio il linguaggio Java:
 
 - Language Support for Java (TM) by Red Hat
 - Extension Pack for Java (Microsoft)
@@ -42,7 +42,14 @@ Poi assicurati di avere le seguenti estensioni sul tuo IDE VS CODE:
 - Spring Boot Extension Pack (VMWare)
 - Spring Boot Snippets (Developer Soapbox)
 
-Inoltre, assicurati di avere Node.js installato sul tuo computer.
+Ti consiglio di installare anche le seguenti estensioni per Visual Studio Code per ottimizzare lo sviluppo lato frontend con React:
+
+- Javascript (ES6) code snippets (charalampos karypidis)
+- Babel JavaScript (Michael McDermott)
+- Prettier (Prettier) - **NOTA: questa estensione serve a formattare il codice e richiede un minimo di configurazione**
+- ES7+ React/Redux/React-Native snippets
+
+Inoltre, assicurati di avere **Node.js** installato sul tuo computer.
 
 Segui i prossimi passi fondamentali per una corretta esecuzione del progetto.
 
