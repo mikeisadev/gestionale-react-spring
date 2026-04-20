@@ -20,6 +20,8 @@ Breve panoramica sul progetto e sulle tecnologie utilizzate
   - Node.js
   - Visual Studio Code
 
+Nota: dovresti installare anche Git sul tuo computer: [https://git-scm.com/](https://git-scm.com/)
+
 # Struttura del progetto
 
 All'interno di questa repository troverai due cartelle:
