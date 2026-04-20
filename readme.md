@@ -47,11 +47,11 @@ Segui i prossimi passi fondamentali per una corretta esecuzione del progetto.
 
 Clona questa repository sul tuo desktop con:
 
-`git clone https://github.com/mikeisadev/gestionale-react-spring.git`
+`git clone --branch main --single-branch https://github.com/mikeisadev/gestionale-react-spring.git`
 
 Altrimenti, se hai già una cartella col nome del progetto, ad esempio "gestionale-react-spring" e vuoi le cartelle di backend e frontend direttamente li dentro esegui il comando aggiungendo un punto "." alla fine del comando:
 
-`git clone https://github.com/mikeisadev/gestionale-react-spring.git .`
+`git clone --branch main --single-branch https://github.com/mikeisadev/gestionale-react-spring.git .`
 
 ## Verificare la versione di Java
 
