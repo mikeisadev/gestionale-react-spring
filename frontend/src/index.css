@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/*
+   Qui posso scrivere il mio CSS personalizzato
+ */
+.custom-card {
+    background-color: rgb(231, 231, 231);
+}
