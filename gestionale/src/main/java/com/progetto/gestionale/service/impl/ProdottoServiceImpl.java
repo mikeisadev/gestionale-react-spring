@@ -11,6 +11,8 @@ import jakarta.transaction.Transactional;
 import com.progetto.gestionale.entity.Prodotto;
 import com.progetto.gestionale.repository.ProdottoRepository;
 
+import com.progetto.gestionale.dto.ProdottoDTO;
+
 @Service
 public class ProdottoServiceImpl implements ProdottiService {
     

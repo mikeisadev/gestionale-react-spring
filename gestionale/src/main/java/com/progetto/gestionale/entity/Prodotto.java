@@ -19,7 +19,6 @@ public class Prodotto {
 
     @Column(nullable = false)
     @NotBlank
-    
     private String titolo;
 
     private String descrizione;
