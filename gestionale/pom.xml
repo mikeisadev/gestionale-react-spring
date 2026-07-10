@@ -72,6 +72,22 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Database in-memory usato SOLO nei test (profilo "test"):
+		     i test non devono dipendere dal MariaDB locale -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Richiesto da TestRestTemplate (test E2E): in Spring Boot 4
+		     RestTemplateBuilder vive nel modulo spring-boot-restclient -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-restclient</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -84,6 +100,20 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- Di default Surefire esegue solo *Test/*Tests: qui includiamo
+					     anche gli integration test *IT così "mvn test" esegue
+					     l'intera piramide (scelta didattica) -->
+					<includes>
+						<include>**/*Test.java</include>
+						<include>**/*Tests.java</include>
+						<include>**/*IT.java</include>
+					</includes>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
